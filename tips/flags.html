@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bandeiras</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.6rem;
+      box-shadow: none;
+      box-sizing: border-box;
+      color: #ddd;
+      background-color: #212121;
+    }
+    h1 {
+      text-align: center;
+    }
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    pre {
+      max-width: 50%;
+      overflow-x: auto;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 40%;
+    }
+    div:after,
+    div:before {
+      content: "";
+      display: block;
+    }
+    .flag {
+      aspect-ratio: 16/9;
+      position: relative;
+    }
+    .japan {
+      background: white;
+      border: 1px solid #ddd;
+    }
+    .japan:after {
+      aspect-ratio: 1;
+      position: absolute;
+      background-color: red;
+      width: 40%;
+      margin: auto;
+      top: 0;  bottom: 0;
+      left: 0;  right: 0;
+      border-radius: 50%;
+    }
+
+    .brazil {
+      background: green;
+      border: 1px solid #ddd;
+    }
+    .brazil:after {
+      position: absolute;
+      width: 80%;
+      top: 6%;  bottom: 6%;
+      left: 0;  right: 0;
+      margin: auto;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      background-color: yellow;
+      z-index: 1;
+    }
+    .brazil:before {
+      aspect-ratio: 1;
+      position: absolute;
+      background-color: blue;
+      width: 30%;
+      margin: auto;
+      top: 0;  bottom: 0;
+      left: 0;  right: 0;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .chile {
+      background: red;
+      border: 1px solid #ddd;
+      overflow: hidden;
+    }
+    .chile:before {
+      aspect-ratio: 1;
+      position: absolute;
+      --distance: 7%;
+      --distance-left: var(--distance);
+      --distance-top: var(--distance);
+      --size: 20%;
+      width: var(--size);
+      height: auto;
+      top: var(--distance-top); left: var(--distance-left);
+      margin: auto;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      background-color: white;
+      z-index: 1;
+    }
+    .chile:after {
+      --background-percent: 35%;
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      right: 0;
+      background: rgb(0,0,255);
+      background: linear-gradient(90deg, rgba(0,0,255,1) var(--background-percent), rgba(255,255,255,1) var(--background-percent));
+    }
+  </style>
+</head>
+<body>
+  <h1>Bandeiras</h1>
+  <main>
+    <div class="container">
+      <h2>Japão</h2>
+      <div class="flag japan"></div>
+      <h2>Brasil</h2>
+      <div class="flag brazil"></div>
+      <h2>Chile</h2>
+      <div class="flag chile"></div>
+    </div>
+    <pre>
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 50%;
+      }
+      div:after,
+      div:before {
+        content: "";
+        display: block;
+      }
+      .flag {
+        aspect-ratio: 16/9;
+        position: relative;
+      }
+      .japan {
+        background: white;
+        border: 1px solid #ddd;
+      }
+      .japan:after {
+        aspect-ratio: 1;
+        position: absolute;
+        background-color: red;
+        width: 40%;
+        margin: auto;
+        top: 0;  bottom: 0;
+        left: 0;  right: 0;
+        border-radius: 50%;
+      }
+  
+      .brazil {
+        background: green;
+        border: 1px solid #ddd;
+      }
+      .brazil:after {
+        position: absolute;
+        width: 80%;
+        top: 6%;  bottom: 6%;
+        left: 0;  right: 0;
+        margin: auto;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        background-color: yellow;
+        z-index: 1;
+      }
+      .brazil:before {
+        aspect-ratio: 1;
+        position: absolute;
+        background-color: blue;
+        width: 30%;
+        margin: auto;
+        top: 0;  bottom: 0;
+        left: 0;  right: 0;
+        border-radius: 50%;
+        z-index: 2;
+      }
+  
+      .chile {
+        background: red;
+        border: 1px solid #ddd;
+        overflow: hidden;
+      }
+      .chile:before {
+        aspect-ratio: 1;
+        position: absolute;
+        --distance: 7%;
+        --distance-left: var(--distance);
+        --distance-top: var(--distance);
+        --size: 20%;
+        width: var(--size);
+        height: auto;
+        top: var(--distance-top); left: var(--distance-left);
+        margin: auto;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        background-color: white;
+        z-index: 1;
+      }
+      .chile:after {
+        --background-percent: 35%;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        right: 0;
+        background: rgb(0,0,255);
+        background: linear-gradient(90deg, rgba(0,0,255,1) var(--background-percent), rgba(255,255,255,1) var(--background-percent));
+      }
+    </pre>
+  </main>
+</body>
+</html>
