@@ -16,6 +16,18 @@
     h1 {
       text-align: center;
     }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .header a,
+      a:visited {
+      color: #aaa;
+      font-size: 1rem;
+      text-decoration: none;
+    }
     .wrapper {
       max-width: 600px;
       margin: 1px auto;
@@ -85,103 +97,109 @@
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <h1>Criando um triangulo</h1>
-    <div class="content">
-      <div>
-        <h3>Desenhe um quadrado 50x50, com borda de 10 na mesma cor</h3>
-        <div class="stage1"></div>
+  <div id="main-body">
+    <div class="wrapper">
+      <div class="header">
+        <h1>Criando um triangulo</h1>
+        <a href="../tips">Voltar</a>
       </div>
-      <pre>
-        .stage1 {
-          width: 50px;
-          height: 50px;
-          background-color: orange;
-          border: 10px solid orange;
-        }
-      </pre>
+      <div class="content">
+        <div>
+          <h3>Desenhe um quadrado 50x50, com borda de 10 na mesma cor</h3>
+          <div class="stage1"></div>
+        </div>
+        <pre>
+          .stage1 {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            border: 10px solid orange;
+          }
+        </pre>
+      </div>
+      <div class="content">
+        <div>
+          <h3>Troque a cor da borda de 10 no topo e na esquerda</h3>
+          <div class="stage2"></div>
+        </div>
+        <pre>
+          .stage2 {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            border: 10px solid orange;
+            border-top: 10px solid black;
+            border-left: 10px solid black;
+          }
+        </pre>
+      </div>
+      <div class="content">
+        <div>
+          <h3>Remova a altura e a largura</h3>
+          <div class="stage3"></div>
+        </div>
+        <pre>
+          .stage3 {
+            width: 0;
+            height: 0;
+            background-color: orange;
+            border: 10px solid orange;
+            border-top: 10px solid black;
+            border-left: 10px solid black;
+          }
+        </pre>
+      </div>
+      <div class="content">
+        <div>
+          <h3>Deixe o fundo e a borda geral transparente</h3>
+          <div class="stage4"></div>
+        </div>
+        <pre>
+          .stage4 {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            border: 10px solid transparent;
+            border-top: 10px solid black;
+            border-left: 10px solid black;
+          }
+        </pre>
+      </div>
+      <div class="content">
+        <div>
+          <h3>Controle o tamanho do triangulo, pela largura da borda</h3>
+          <div class="stage5"></div>
+        </div>
+        <pre>
+          .stage5 {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            border: 40px solid transparent;
+            border-top: 40px solid black;
+            border-left: 40px solid black;
+          }
+        </pre>
+      </div>
+      <div class="content">
+        <div>
+          <h3>Pode até arredondar os cantos</h3>
+          <div class="stage6"></div>
+        </div>
+        <pre>
+          .stage6 {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            border: 40px solid transparent;
+            border-top: 40px solid black;
+            border-left: 40px solid black;
+            border-radius: 10px;
+          }
+        </pre>
+      </div>    
     </div>
-    <div class="content">
-      <div>
-        <h3>Troque a cor da borda de 10 no topo e na esquerda</h3>
-        <div class="stage2"></div>
-      </div>
-      <pre>
-        .stage2 {
-          width: 50px;
-          height: 50px;
-          background-color: orange;
-          border: 10px solid orange;
-          border-top: 10px solid black;
-          border-left: 10px solid black;
-        }
-      </pre>
-    </div>
-    <div class="content">
-      <div>
-        <h3>Remova a altura e a largura</h3>
-        <div class="stage3"></div>
-      </div>
-      <pre>
-        .stage3 {
-          width: 0;
-          height: 0;
-          background-color: orange;
-          border: 10px solid orange;
-          border-top: 10px solid black;
-          border-left: 10px solid black;
-        }
-      </pre>
-    </div>
-    <div class="content">
-      <div>
-        <h3>Deixe o fundo e a borda geral transparente</h3>
-        <div class="stage4"></div>
-      </div>
-      <pre>
-        .stage4 {
-          width: 0;
-          height: 0;
-          background-color: transparent;
-          border: 10px solid transparent;
-          border-top: 10px solid black;
-          border-left: 10px solid black;
-        }
-      </pre>
-    </div>
-    <div class="content">
-      <div>
-        <h3>Controle o tamanho do triangulo, pela largura da borda</h3>
-        <div class="stage5"></div>
-      </div>
-      <pre>
-        .stage5 {
-          width: 0;
-          height: 0;
-          background-color: transparent;
-          border: 40px solid transparent;
-          border-top: 40px solid black;
-          border-left: 40px solid black;
-        }
-      </pre>
-    </div>
-    <div class="content">
-      <div>
-        <h3>Pode até arredondar os cantos</h3>
-        <div class="stage6"></div>
-      </div>
-      <pre>
-        .stage6 {
-          width: 0;
-          height: 0;
-          background-color: transparent;
-          border: 40px solid transparent;
-          border-top: 40px solid black;
-          border-left: 40px solid black;
-          border-radius: 10px;
-        }
-      </pre>
-    </div>    
   </div>
+  <script src="../assets/app.js"></script>
 </body>
 </html>
